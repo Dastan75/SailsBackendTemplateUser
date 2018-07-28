@@ -1,0 +1,18 @@
+{
+  "name": "template_sails",
+  "version": "1.0.0",
+  "description": "SailsJs Backend with user and profiles logic",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd docker-compose/dev && docker-compose up --force-recreate",
+    "start-prod": "cd docker-compose/prod && docker-compose up --force-recreate",
+    "rebuild-dev": "cd docker-compose/dev && docker-compose build --no-cache",
+    "rebuild-prod": "cd docker-compose/prod && docker-compose build --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dastan75/SailsBackendTemplateUser.git"
+  },
+  "author": "dastan75.fb@gmail.com",
+  "license": "MIT"
+}

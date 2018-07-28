@@ -1,0 +1,32 @@
+version: '2'
+services:
+  mongo:
+    image: "mongo:latest"
+    expose:
+    - 27017
+    networks:
+      - db
+  mongo_client:
+    image: "mongo-express:latest"
+    ports:
+      - "8081:8081"
+    networks:
+      - db
+    depends_on:
+      - mongo
+  template_api_dev:
+    build:
+      context: ../../server/
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+     - "1337:1337"
+    networks:
+      - db
+    depends_on:
+      - mongo
+    volumes:
+      - ./../../server/api:/app/api
+      - ./../../server/config:/app/config
+networks:
+  db:
+   driver: bridge
