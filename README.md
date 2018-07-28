@@ -1,2 +1,3 @@
 # SailsBackendTemplateUser
-SailsJs Backend with user and profiles logic
+[Sails](http://sailsjs.org) Backend with user and profiles logic
+
